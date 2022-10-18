@@ -1,2 +1,11 @@
-# advent-writeups
-Preparing a website to display my future writeups for the upcoming 2023 advent of code challenge
+# fresh project
+
+### Usage
+
+Start the project:
+
+```
+deno task start
+```
+
+This will watch the project directory and restart as necessary.
