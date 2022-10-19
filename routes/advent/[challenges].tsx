@@ -37,32 +37,38 @@ export const handler: Handlers<Advent | null> = {
 
 export default function ChallengesPage({ data }: PageProps<Advent | null>) {
   if (!data) {
-    return <div class="flex flex-col place-items-center justify-center h-screen"><p class="text-2xl text-white">Challenge not found 😥</p></div>;
+    return (
+      <div class="flex flex-col place-items-center justify-center h-screen">
+        <p class="text-2xl text-white font-inconsolata">Challenge not found 😥</p>
+      </div>
+    );
   } else {
     return (
       <main class="h-full flex justify-center">
         <div class="container mx-auto">
-          <h1 class="text-5xl text-white p-5 text-center">
-            Loadeksdi's {data.year} Advent of Code writeups #{data.day}
+          <h1 class="text-5xl text-white p-5 text-center font-advent">
+            <a href="/">
+              Loadeksdi's {data.year} Advent of Code writeups #{data.day}
+            </a>
           </h1>
-          <h1 class="text-3xl text-white border-b p-3 text-left">
+          <h1 class="text-3xl text-white border-b p-3 text-left font-inconsolata">
             Topic
           </h1>
-          <p class="p-3 text-white">
+          <p class="p-3 text-white font-inconsolata">
             The topic of the challenge can be found{" "}
             <a
               href={data.topic.toString()}
               target="_blank"
-              class="text-blue-600 visited:text-red-700 underline"
+              class="text-blue-600 visited:text-purple-500 underline"
             >
               here
             </a>
           </p>
-          <h1 class="text-3xl text-white p-3 text-left">My solution</h1>
-          <div class="mt-2 overflow-auto max-h-screen">
+          <h1 class="text-3xl text-white p-3 text-left font-inconsolata">My solution</h1>
+          <div class="mt-2">
             <pre><code class="language-javascript">{data.solution}</code></pre>
           </div>
-          <div class="mt-2 flex place-content-between">
+          <div class="mt-2 flex place-content-between font-inconsolata">
             <Safelink day={data.day} next={false} />
             <Safelink day={data.day} next={true} />
           </div>
