@@ -10,7 +10,7 @@ export default function Home() {
         </p>
         <a
           href="/advent/1"
-          class="text-3xl text-blue-600 visited:text-purple-500 underline mb-3"
+          class="text-3xl text-blue-600 visited:text-purple-500 underline mb-3 font-inconsolata"
         >
           2021
         </a>
