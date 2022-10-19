@@ -11,6 +11,9 @@ export default function Footer() {
           <i class="fa-3x fab fa-github"></i>
         </a>
       </div>
+      <div>
+        <a href="https://fresh.deno.dev"><img width="197" height="37" src="https://fresh.deno.dev/fresh-badge.svg" alt="Made with Fresh"/></a>
+      </div>
     </footer>
   );
 }

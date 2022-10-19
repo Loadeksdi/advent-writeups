@@ -44,7 +44,7 @@ export default function ChallengesPage({ data }: PageProps<Advent | null>) {
     );
   } else {
     return (
-      <main class="h-full flex justify-center">
+      <main class="h-full flex justify-center mx-8">
         <div class="container mx-auto">
           <h1 class="text-5xl text-white p-5 text-center font-advent">
             <a href="/">
