@@ -1,5 +1,6 @@
 import { PageProps } from "$fresh/server.ts";
-import { Footer } from "../../components/Footer.tsx";
+import Footer from "../../components/Footer.tsx";
+import Safelink from "../../components/Safelink.tsx";
 
 const year = 2021;
 
@@ -36,10 +37,10 @@ export const handler: Handlers<Advent | null> = {
 
 export default function ChallengesPage({ data }: PageProps<Advent | null>) {
   if (!data) {
-    return <p>Challenge not found</p>;
+    return <div class="flex flex-col place-items-center justify-center h-screen"><p class="text-2xl text-white">Challenge not found 😥</p></div>;
   } else {
     return (
-      <main class="bg-pink-400 h-screen flex justify-center">
+      <main class="h-full flex justify-center">
         <div class="container mx-auto">
           <h1 class="text-5xl text-white p-5 text-center">
             Loadeksdi's {data.year} Advent of Code writeups #{data.day}
@@ -47,37 +48,23 @@ export default function ChallengesPage({ data }: PageProps<Advent | null>) {
           <h1 class="text-3xl text-white border-b p-3 text-left">
             Topic
           </h1>
-          <p class="p-3">
+          <p class="p-3 text-white">
             The topic of the challenge can be found{" "}
             <a
               href={data.topic.toString()}
               target="_blank"
-              class="text-blue-600 visited:text-purple-600 underline"
+              class="text-blue-600 visited:text-red-700 underline"
             >
               here
             </a>
           </p>
           <h1 class="text-3xl text-white p-3 text-left">My solution</h1>
-          <div class="mt-3 overflow-auto max-h-full">
+          <div class="mt-2 overflow-auto max-h-screen">
             <pre><code class="language-javascript">{data.solution}</code></pre>
           </div>
-          <div class="flex place-content-between">
-            <div>
-              <a
-                href={data.day <= 1 ? undefined : `/advent/${+data.day - 1}`}
-                class="text-2xl text-white text-left underline"
-              >
-                {data.day <= 1 ? " " : "Previous challenge"}
-              </a>
-            </div>
-            <div>
-              <a
-                href={data.day >= 25 ? undefined : `/advent/${+data.day + 1}`}
-                class="text-2xl text-white text-left underline"
-              >
-                {data.day >= 25  ? " " : "Next challenge"}
-              </a>
-            </div>
+          <div class="mt-2 flex place-content-between">
+            <Safelink day={data.day} next={false} />
+            <Safelink day={data.day} next={true} />
           </div>
           <Footer />
         </div>
