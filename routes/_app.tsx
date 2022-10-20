@@ -3,7 +3,7 @@ import { Head } from "$fresh/runtime.ts";
 
 export default function App({ Component }: AppProps) {
   return (
-    <>
+    <html class="h-full">
       <Head>
         <link
           rel="stylesheet"
@@ -31,9 +31,9 @@ export default function App({ Component }: AppProps) {
         <script>hljs.highlightAll();</script>
         <title>Loadeksdi's Advent of Code</title>
       </Head>
-      <body class="bg-darkbg h-full">
+      <body class="bg-darkbg h-full flex flex-col">
         <Component />
       </body>
-    </>
+    </html>
   );
 }
