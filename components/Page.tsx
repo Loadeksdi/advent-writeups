@@ -18,7 +18,7 @@ export default function Page(props: PageProps) {
   } else {
     return (
       <>
-        <main class="h-full flex-1 justify-center mx-8">
+        <main class="flex-1 justify-center mx-20">
           <div class="container mx-auto">
             <h2 class="text-5xl text-white p-5 text-center font-advent">
               <a href="/">
@@ -45,20 +45,20 @@ export default function Page(props: PageProps) {
             <div class="mt-2">
               <pre><code class="language-javascript">{props.advent.solution}</code></pre>
             </div>
-            <div class="mt-2 flex place-content-between font-inconsolata">
-              <Safelink
-                day={props.advent.day}
-                next={false}
-                year={props.advent.year}
-              />
-              <Safelink
-                day={props.advent.day}
-                next={true}
-                year={props.advent.year}
-              />
-            </div>
           </div>
         </main>
+        <div class="mt-2 mx-10 flex place-content-between font-inconsolata">
+          <Safelink
+            day={props.advent.day}
+            next={false}
+            year={props.advent.year}
+          />
+          <Safelink
+            day={props.advent.day}
+            next={true}
+            year={props.advent.year}
+          />
+        </div>
         <Footer />
       </>
     );

@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer class="bg-darkbg h-20 gap-20 flex mb-2 justify-center items-center text-white">
+    <footer class="bg-darkbg flex h-20 mb-3 place-content-evenly items-center text-white">
       <div>
         <a href="https://twitter.com/voidembracer99" target="_blank">
           <i class="fa-3x fab fa-twitter"></i>
@@ -12,7 +12,12 @@ export default function Footer() {
         </a>
       </div>
       <div>
-        <a href="https://fresh.deno.dev"><img width="197" height="37" src="https://fresh.deno.dev/fresh-badge.svg" alt="Made with Fresh"/></a>
+        <a href="https://fresh.deno.dev">
+          <img
+            src="https://fresh.deno.dev/fresh-badge.svg"
+            alt="Made with Fresh"
+          />
+        </a>
       </div>
     </footer>
   );
