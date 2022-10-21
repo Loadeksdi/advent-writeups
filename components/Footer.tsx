@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer class="bg-darkbg flex h-20 mb-3 place-content-evenly items-center text-white">
+    <footer class="bg-darkbg flex h-20 mb-2 mx-10 gap-20 justify-center items-center text-white">
       <div>
         <a href="https://twitter.com/voidembracer99" target="_blank">
           <i class="fa-3x fab fa-twitter"></i>

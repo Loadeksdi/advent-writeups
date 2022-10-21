@@ -31,7 +31,7 @@ export default function App({ Component }: AppProps) {
         <script>hljs.highlightAll();</script>
         <title>Loadeksdi's Advent of Code</title>
       </Head>
-      <body class="bg-darkbg h-full flex flex-col">
+      <body class="bg-darkbg flex flex-col">
         <Component />
       </body>
     </html>
