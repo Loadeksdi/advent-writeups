@@ -17,7 +17,7 @@ export default function Page(props: PageProps) {
     );
   } else {
     return (
-      <>
+      <body class="bg-darkbg flex flex-col">
         <main class="flex-1 justify-center mx-20">
           <div class="container mx-auto">
             <h2 class="text-5xl text-white p-5 text-center font-advent">
@@ -60,7 +60,7 @@ export default function Page(props: PageProps) {
           />
         </div>
         <Footer />
-      </>
+      </body>
     );
   }
 }

@@ -3,9 +3,9 @@ import Footer from "../components/Footer.tsx";
 
 export default function Home() {
   return (
-    <>
-      <main class="bg-darkbg flex-1">
-        <div class="flex flex-col justify-center items-center">
+    <body class="bg-darkbg flex flex-col h-full">
+      <main class="bg-darkbg h-screen flex-1">
+        <div class="flex flex-col justify-center items-center h-full">
           <p class="text-5xl text-white p-5 text-center font-advent animate-pulse">
             Welcome to my Advent of Code writeups!
           </p>
@@ -20,6 +20,6 @@ export default function Home() {
         </div>
       </main>
       <Footer />
-    </>
+    </body>
   );
 }
