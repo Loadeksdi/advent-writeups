@@ -20,8 +20,14 @@ export function returnHandler(year: number) {
   return {
     async GET(_, ctx) {
       const { challenges } = ctx.params;
+      let url = "";
+      if (year === 2021) {
+        url = `advent${year}/main/day${challenges}/index.js`;
+      } else if (year === 2022) {
+        url = `advent${year}/main/day${challenges}/src/main.rs`;
+      }
       const solutionResp: Response = await fetch(
-        `https://raw.githubusercontent.com/Loadeksdi/advent${year}/main/day${challenges}/index.js`,
+        `https://raw.githubusercontent.com/Loadeksdi/${url}`,
       );
       if (solutionResp.status === 404) {
         return ctx.render(null);
