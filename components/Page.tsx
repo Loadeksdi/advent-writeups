@@ -6,6 +6,12 @@ interface PageProps {
   advent: Advent | null;
 }
 
+function highlightCode(props: PageProps) {
+  return props.advent?.year === 2021
+    ? <pre><code class="langage-javascript">{props.advent.solution}</code></pre>
+    : <pre><code class="langage-rust">{props.advent?.solution}</code></pre>;
+}
+
 export default function Page(props: PageProps) {
   if (!props.advent) {
     return (
@@ -43,7 +49,7 @@ export default function Page(props: PageProps) {
               My solution
             </h1>
             <div class="mt-2">
-              <pre><code class="language-javascript">{props.advent.solution}</code></pre>
+              {highlightCode(props)}
             </div>
           </div>
         </main>
