@@ -7,7 +7,7 @@ export default function Footer() {
         </a>
       </div>
       <div>
-        <a href="https://github.com/Loadeksdi/advent" target="_blank">
+        <a href="https://github.com/Loadeksdi" target="_blank">
           <i class="fa-3x fab fa-github"></i>
         </a>
       </div>
